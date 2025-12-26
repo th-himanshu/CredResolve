@@ -1,0 +1,184 @@
+/* Reset & Base Styles */
+:root {
+  --primary-color: #00bf63; /* Splitwise-ish Green */
+  --primary-hover: #009e52;
+  --secondary-color: #5bc5a7;
+  --background-color: #f6f6f6;
+  --text-color: #333333;
+  --card-bg: #ffffff;
+  --border-radius: 8px;
+  --box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  --error-color: #ff4d4f;
+  --danger-color: #ff4d4f;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout Utilities */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 15px 0;
+  margin-bottom: 30px;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Forms & Inputs */
+.form-group {
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Fix padding expanding width */
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+button.secondary {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+button.secondary:hover {
+  background-color: #d5d5d5;
+}
+
+/* Lists */
+.list-item {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+/* Specific Page Styles */
+.auth-container {
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+.balance-item {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.expense-meta {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+/* Split Form Grid */
+.split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
